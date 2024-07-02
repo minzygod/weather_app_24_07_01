@@ -3,17 +3,17 @@
 ### 설치할 라이브러리
 
 - [x] react-router-dom
+- [x] axois
+- [x] tan-stack-query
 - [] styled-components
 - [] styled-reset
-- [] axois
-- [] tan-stack-query
 - [] react-helmet
 
 ### 작업 내용
 
-- [] 라우터 설정
-- [] 각 페이지 컴포넌트 구성
-- [] api 설정
+- [x] 라우터 설정
+- [x] 각 페이지 컴포넌트 구성
+- [] api 설정 (npm에서 axios 다운)
 - [] 데이터 받아오기
 - [] 스타일
 - [] 현재 위치 얻어오기

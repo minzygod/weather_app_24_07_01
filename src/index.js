@@ -9,10 +9,10 @@ const queryClient = new QueryClient();
 // new -> 생성자 함수, construct function
 
 root.render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <GlobalStyled />
-      <Router />
-    </QueryClientProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <QueryClientProvider client={queryClient}>
+    <GlobalStyled />
+    <Router />
+  </QueryClientProvider>
+  // </React.StrictMode>
 );

@@ -12,10 +12,15 @@ const instance = axios.create({
 //...JSON XML 더 알아보기
 // 함수를 만든다는 것 = 기능을 만든다는 것
 
-export const getWeather = () => {
-  const lat = "35.1798200522868";
-  const lon = "129.075087492149";
-  return instance.get(`weather?lat=${lat}&lon=${lon}`).then((res) => res.data);
+export const getWeather = ({ queryKey }) => {
+  console.log(queryKey);
+  const [weather, lat, lon] = queryKey;
+  //비구조화할당 할 때는 문자열 사용금지
+  // console.log(weather);
+
+  return instance
+    .get(`${weather}?lat=${lat}&lon=${lon}`)
+    .then((res) => res.data);
   //   get은 노출시켜야 할 정보 (자바스크립트 매서드 설명할 때 배움)
   //   post는 비밀번호 등 노출하지 않는 정보
 };

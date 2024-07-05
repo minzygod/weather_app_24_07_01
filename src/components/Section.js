@@ -45,28 +45,22 @@ const Num = styled.div`
   }
 `;
 
-export const Section = () => {
-  const { lat, lon } = useCurrentPos();
-  const { data, isLoading } = useQuery({
-    queryKey: ["weather", lat, lon],
-    queryFn: getWeather,
-  });
-
+export const Section = ({ SectionData }) => {
   return (
     <SSection>
       <h3>HOT</h3>
 
       <TempWrap>
         <Temp className="temp">
-          {Math.round(data.main.temp)} <span>°</span>
+          {Math.round(SectionData.main.temp)} <span>°</span>
         </Temp>
 
         <Temp>
           <Num>
-            {Math.round(data.main.temp_max)} <span>°</span>c
+            {Math.round(SectionData.main.temp_max)} <span>°</span>c
           </Num>
           <Num>
-            {Math.round(data.main.temp_min)} <span>°</span>c
+            {Math.round(SectionData.main.temp_min)} <span>°</span>c
           </Num>
         </Temp>
       </TempWrap>

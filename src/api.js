@@ -13,7 +13,7 @@ const instance = axios.create({
 // 함수를 만든다는 것 = 기능을 만든다는 것
 
 export const getWeather = ({ queryKey }) => {
-  console.log(queryKey);
+  // console.log(queryKey);
   const [weather, lat, lon] = queryKey;
   //비구조화할당 할 때는 문자열 사용금지
   // console.log(weather);

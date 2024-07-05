@@ -25,14 +25,14 @@ const More = styled.div`
   font-size: 26px;
 `;
 
-export const Header = (data) => {
+export const Header = ({ headerData }) => {
   return (
     <SHeader>
       <Menu>
         <FontAwesomeIcon icon={faBars} />
       </Menu>
       <MyLocation>
-        <h3>{data.name}</h3>
+        <h3>{headerData.name}</h3>
         <p>Sat, 19:30 pm</p>
       </MyLocation>
       <More>

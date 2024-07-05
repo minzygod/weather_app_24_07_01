@@ -7,6 +7,8 @@ import { useCurrentPos } from "../lib/useCurrentPos";
 import { Loading } from "../components/Loading";
 import { Header } from "../components/Header";
 import { Section } from "../components/Section";
+import { Helmet } from "react-helmet-async";
+import { Title } from "../components/Title";
 
 const Container = styled.div`
   max-width: 450px;
@@ -30,9 +32,9 @@ export const Home = () => {
 
   // console.log(lat, lon);
 
-  console.log(data);
+  // console.log(data);
   // console.log(data?.main?.temp);
-  console.log(isLoading);
+  // console.log(isLoading);
 
   return (
     <>
@@ -40,10 +42,11 @@ export const Home = () => {
         <Loading />
       ) : (
         <>
+          <Title titleName={"Home"} />
           {data && (
             <Container>
-              <Header />
-              <Section />
+              <Header headerData={data} />
+              <Section SectionData={data} />
             </Container>
           )}
         </>
